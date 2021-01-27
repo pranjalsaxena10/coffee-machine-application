@@ -3,10 +3,13 @@ import ingredients.IngredientsInventoryService;
 import java.util.concurrent.Semaphore;
 
 public class CoffeeMachine {
-    private static final int NO_OF_OUTLETS = 3;
+    private static int NO_OF_OUTLETS;
     private final Semaphore availableOutlet = new Semaphore(NO_OF_OUTLETS, true);
     private boolean[] inUse = new boolean[NO_OF_OUTLETS];
     private CoffeeOutlet[] coffeeOutlets = new CoffeeOutlet[NO_OF_OUTLETS];
+    static {
+        NO_OF_OUTLETS = InputFactory.getNoOfOutlets();
+    }
 
     private final IngredientsInventoryService ingredientsInventoryService;
 

@@ -9,6 +9,10 @@ import java.util.concurrent.Executors;
 public class CoffeeMachineApplication {
 
     public static void main(String[] args) {
+        String filePath = "src/main/java/input.json";
+        InputFactory inputFactory = new InputFactory(filePath);
+        inputFactory.invokeFileInput();
+
         IngredientsInventoryService ingredientsInventoryService = new IngredientsInventoryServiceImpl();
         CoffeeMachine coffeeMachine = new CoffeeMachine(ingredientsInventoryService);
 
@@ -17,8 +21,8 @@ public class CoffeeMachineApplication {
 
         BeverageFactory beverageFactory = new BeverageFactory();
         String[] beveragesType = {"hot_tea", "hot_coffee", "black_tea", "green_tea"};
-        Beverage[] beverages = new Beverage[4];
-        for(int i=0; i<4; i++) {
+        Beverage[] beverages = new Beverage[InputFactory.getNoOfBeverages()];
+        for(int i=0; i<beverages.length; i++) {
             beverages[i] = beverageFactory.create(beveragesType[i]);
         }
 
