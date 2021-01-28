@@ -1,5 +1,8 @@
 package ingredients;
 
+/**
+ * Enum to hold different Ingredients
+ */
 public enum IngredientsTypes {
     hot_water,
     hot_milk,

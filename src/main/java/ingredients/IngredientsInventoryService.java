@@ -5,6 +5,9 @@ import exception.InsufficientIngredientException;
 
 import java.util.Map;
 
+/**
+ * This interface is used to design Ingredients
+ */
 public interface IngredientsInventoryService {
 
     /**

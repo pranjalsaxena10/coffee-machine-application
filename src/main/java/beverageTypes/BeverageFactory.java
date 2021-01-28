@@ -1,5 +1,8 @@
 package beverageTypes;
 
+/**
+ * This class is used to create Beverage of different types
+ */
 public class BeverageFactory {
 
     public Beverage create (final String beverageType) {

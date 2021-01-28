@@ -16,7 +16,14 @@ public class CoffeeMachineApplication {
         IngredientsInventoryService ingredientsInventoryService = new IngredientsInventoryServiceImpl();
         CoffeeMachine coffeeMachine = new CoffeeMachine(ingredientsInventoryService);
 
+        /**
+         * threadCount => gives feel about different users interacting with coffee application
+         */
         final int threadCount = 4;
+
+        /**
+         * ThreadPool is created
+         */
         final ExecutorService service = Executors.newFixedThreadPool(threadCount);
 
         BeverageFactory beverageFactory = new BeverageFactory();

@@ -2,6 +2,9 @@ import beverageTypes.Beverage;
 import exception.IllegalIngredientException;
 import exception.InsufficientIngredientException;
 
+/**
+ * Every User is treated as thread in order to implement Coffee Machine Application
+ */
 public class User implements Runnable {
 
     private CoffeeMachine coffeeMachine;

@@ -8,6 +8,9 @@ import java.io.*;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * This class is used to read data from file system
+ */
 public class InputFactory {
 
     private static String filePath;

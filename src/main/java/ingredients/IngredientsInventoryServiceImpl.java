@@ -6,6 +6,10 @@ import exception.InsufficientIngredientException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+
+/**
+ * This class is used to implement IngredientsInventoryService
+ */
 public class IngredientsInventoryServiceImpl implements IngredientsInventoryService {
 
     private Map<IngredientsTypes, Integer> availableIngredients;

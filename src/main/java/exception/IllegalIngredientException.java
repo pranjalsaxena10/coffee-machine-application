@@ -1,5 +1,8 @@
 package exception;
 
+/**
+ * This is implemented to have custom exception
+ */
 public class IllegalIngredientException extends Exception {
     /**
      * Constructs a new exception with the specified detail message.  The

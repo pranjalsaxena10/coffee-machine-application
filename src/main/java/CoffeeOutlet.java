@@ -5,6 +5,9 @@ import ingredients.IngredientsInventoryService;
 
 import java.util.Map;
 
+/**
+ * This class is used to implement functionality of each outlet available in Coffee Machine
+ */
 public class CoffeeOutlet {
     private int id;
     private IngredientsInventoryService ingredientsInventoryService;
@@ -14,14 +17,29 @@ public class CoffeeOutlet {
         this.ingredientsInventoryService = ingredientsInventoryService;
     }
 
+    /**
+     * Id of the outlet
+     * @return
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id of that outlet
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * This method is used to implement functionality of Beverage preparation
+     * @param beverage
+     * @throws InsufficientIngredientException
+     * @throws InterruptedException
+     * @throws IllegalIngredientException
+     */
     public void prepareBeverage(Beverage beverage) throws InsufficientIngredientException, InterruptedException, IllegalIngredientException {
         try {
             Thread.sleep(4000);
@@ -37,7 +55,8 @@ public class CoffeeOutlet {
             }
 
             System.out.println(String.format("%s is prepared",beverage.beverageType()));
-        }catch(InterruptedException | IllegalIngredientException | InsufficientIngredientException e) {
+
+        } catch(InterruptedException | IllegalIngredientException | InsufficientIngredientException e) {
             throw e;
         }
     }

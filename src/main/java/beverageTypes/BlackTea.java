@@ -5,6 +5,10 @@ import ingredients.IngredientsTypes;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Description about Black Tea
+ */
+
 public class BlackTea implements Beverage {
 
     @Override

@@ -5,6 +5,9 @@ import ingredients.IngredientsTypes;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Description about Hot Tea
+ */
 public class HotTea implements Beverage {
     @Override
     public String beverageType() {
